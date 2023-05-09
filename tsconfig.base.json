@@ -11,7 +11,8 @@
     "lib": ["ES2022", "dom"],
     "baseUrl": "./",
     "paths": {
-      "@loader/projecta": ["projecta/src/index.ts"]
+      "@loader/projecta": ["projecta/src/index.ts"],
+      "@loader/shared": ["shared/src/index.ts"]
     }
   }
 }
