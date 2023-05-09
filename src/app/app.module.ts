@@ -5,14 +5,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from '@loader/shared';
 
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
+import { ConfigurationComponent } from './pages/configuration/configuration.component';
+import { AppConfigurationComponent } from './components/app-configuration/app-configuration.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent
-  ],
+  declarations: [AppComponent, HomeComponent, ConfigurationComponent, AppConfigurationComponent],
   imports: [
     BrowserModule,
     SharedModule,
@@ -20,6 +20,6 @@ import { HomeComponent } from './pages/home/home.component';
     BrowserAnimationsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

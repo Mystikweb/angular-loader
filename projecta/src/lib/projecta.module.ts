@@ -16,5 +16,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
   declarations: [
     DashboardComponent
   ],
+  exports: [
+  ],
 })
-export class ProjectaModule {}
+export class ProjectaModule { }
