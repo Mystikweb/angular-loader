@@ -1,0 +1,47 @@
+{
+  "name": "projecta",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "projecta/src",
+  "prefix": "pja",
+  "tags": [],
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "projecta/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "projecta/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "projecta/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "projecta/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["projecta/**/*.ts", "projecta/**/*.html"]
+      }
+    }
+  }
+}
